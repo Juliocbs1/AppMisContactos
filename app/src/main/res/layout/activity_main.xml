@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+
+
+    >
+
+  <include android:id="@+id/toolbar"
+  layout="@layout/actionbar">
+</include>
+
+  <!--  <ListView
+        android:id="@+id/lstContactos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        >
+
+    </ListView>
+    -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContactos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

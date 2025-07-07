@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cvContacto"
+    card_view:cardCornerRadius="@dimen/corner_radius_cardview"
+    >
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/falco"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal">
+
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/icons8_me_gusta_50"
+
+             />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pnombre"
+            android:textSize="@dimen/nombre_cardview"
+            android:textStyle="bold">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ptelefono"
+            android:textSize="@dimen/nombre_cardview"
+            android:textStyle="bold">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

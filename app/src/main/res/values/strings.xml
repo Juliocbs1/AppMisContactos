@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">MisContactos</string>
+    <string name="oncreate">OnCreate</string>
+    <string name="onstart">OnStart</string>
+    <string name="onresume">OnResume</string>
+    <string name="onrestart">OnRestart</string>
+    <string name="onpause">OnPause</string>
+    <string name="onstop">OnStop</string>
+    <string name="ondestroy">OnDestroy</string>
+
+    <string name="oncreate_contacto">OnCreate Detalle"></string>
+    <string name="onstart_contacto">OnStart Detalle</string>
+    <string name="onresume_contacto">OnResume Detalle</string>
+    <string name="onrestart_contacto">OnRestart Detalle</string>
+    <string name="onpause_contacto">OnPause Detalle</string>
+    <string name="onstop_contacto">OnStop Detalle</string>
+    <string name="ondestroy_contacto">OnDestroy Detalle</string>
+
+
+    <string name="nombre">Anahi Salgado</string>
+    <string name="telefono">5555555555</string>
+    <string name="email">anahi5@example-pet-store.com</string>
+
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="pemail">email</string>
+
+
+</resources>
