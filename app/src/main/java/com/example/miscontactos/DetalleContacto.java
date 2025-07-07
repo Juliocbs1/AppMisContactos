@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -24,6 +25,17 @@ public class DetalleContacto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar); // IMPORTANTE
+
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+
 
         Bundle parametros = getIntent().getExtras();
 
@@ -60,7 +72,7 @@ public class DetalleContacto extends AppCompatActivity {
         if (keyCode == KeyEvent.KEYCODE_BACK){
             Intent intent = new Intent(DetalleContacto.this, MainActivity.class);
             startActivity(intent);
-            finish();
+
             return true;
 
         }
@@ -68,44 +80,8 @@ public class DetalleContacto extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, getString(R.string.onstart_contacto), Toast.LENGTH_SHORT).show();
 
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, getString(R.string.onresume_contacto), Toast.LENGTH_SHORT).show();
-    }
 
-    //Actividad corriendo
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(this, getString(R.string.onrestart_contacto), Toast.LENGTH_SHORT).show();
-    }
-
-    //Actividad detenida
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, getString(R.string.onpause_contacto), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, getString(R.string.onstop_contacto), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, getString(R.string.ondestroy_contacto), Toast.LENGTH_SHORT).show();
-    }
 }

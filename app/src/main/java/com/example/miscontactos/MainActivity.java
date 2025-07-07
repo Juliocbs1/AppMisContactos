@@ -1,18 +1,14 @@
 package com.example.miscontactos;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -27,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar miActionBar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(miActionBar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 
 
@@ -84,44 +80,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(this, getString(R.string.onstart), Toast.LENGTH_SHORT).show();
-        
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, getString(R.string.onresume), Toast.LENGTH_SHORT).show();
-    }
-
-    //Actividad corriendo
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(this, getString(R.string.onrestart), Toast.LENGTH_SHORT).show();
-    }
-
-    //Actividad detenida
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(this, getString(R.string.onpause), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(this, getString(R.string.onstop), Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(this, getString(R.string.ondestroy), Toast.LENGTH_SHORT).show();
-    }
 }
