@@ -18,6 +18,14 @@
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
         <activity
+            android:name=".SettingsActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AboutActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
