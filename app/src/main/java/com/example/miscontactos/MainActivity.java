@@ -2,6 +2,7 @@ package com.example.miscontactos;
 
 
 import android.os.Bundle;
+import android.view.Menu;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -79,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         contactos.add(new Contacto("Pedro","645623","pedro@example.com",R.drawable.coservipp));
     }
 
-
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones,menu);
+        return true;
+    }
 }
