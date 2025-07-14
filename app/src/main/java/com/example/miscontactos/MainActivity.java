@@ -4,14 +4,19 @@ package com.example.miscontactos;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,7 +38,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        listaContactos = (RecyclerView) findViewById(R.id.rvContactos);
+
+
+        //Instrucciones recycler view
+        listaContactos = findViewById(R.id.rvContactos);
+
+
+
+
+
         /*LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);*/
         GridLayoutManager llm = new GridLayoutManager(this,2);
@@ -42,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
         inicializarListaContacto();
         inicializarAdaptador();
+
+
 
 
 
@@ -105,5 +120,11 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
 
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_contexto,menu);
     }
 }

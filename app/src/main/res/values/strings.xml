@@ -31,4 +31,9 @@
     <string name="texto_about">Acerca de 2025</string>
 
 
+    <string name="menu_edit">Edit</string>
+    <string name="menu_delete">Delete</string>
+
+
+
 </resources>

@@ -3,12 +3,15 @@ package com.example.miscontactos;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
@@ -31,6 +34,8 @@ public class DetalleContacto extends AppCompatActivity {
         setSupportActionBar(toolbar); // IMPORTANTE
 
 
+
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
@@ -50,6 +55,7 @@ public class DetalleContacto extends AppCompatActivity {
         tvEmail =  findViewById(R.id.tvEmail);
         tvEmail.setText(email);
 
+        registerForContextMenu(tvNombre);
     }
 
     public void llamar(View view) {
@@ -80,8 +86,22 @@ public class DetalleContacto extends AppCompatActivity {
 
     }
 
+    //Menu de contexto
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu_contexto,menu);
+    }
+    //Verificar que opcion se selecciono
 
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
 
-
-
+        if (item.getItemId() == R.id.mEdit){
+            Toast.makeText(this,getString(R.string.menu_edit),Toast.LENGTH_SHORT).show();
+        }else if(item.getItemId() == R.id.mDelete){
+            Toast.makeText(this,getString(R.string.menu_delete),Toast.LENGTH_SHORT).show();
+        }
+        return super.onContextItemSelected(item);
+    }
 }

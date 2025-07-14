@@ -8,7 +8,7 @@
     android:elevation="@dimen/elevacion_actionbar"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    android:paddingTop="5dp">
+    android:paddingTop="7dp">
 
 
 </androidx.appcompat.widget.Toolbar>
