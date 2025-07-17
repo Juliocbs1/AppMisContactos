@@ -1,1 +1,1 @@
-Aplciacion mobil que usar recycler view, toolbar y usos de intents y activity
+Aplicacion mobil que usa recycler view, toolbar, usos de intents, activity,menus
