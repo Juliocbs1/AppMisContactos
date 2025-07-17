@@ -11,6 +11,16 @@
         layout="@layout/actionbar">
     </include>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgContacto"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/falco"
+        android:onClick="enviarEmail"
+
+        >
+    </androidx.appcompat.widget.AppCompatImageView>
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
@@ -78,7 +88,12 @@
         >
     </TextView>
 
+
+
 </LinearLayout>
+
+
+
 
 
 

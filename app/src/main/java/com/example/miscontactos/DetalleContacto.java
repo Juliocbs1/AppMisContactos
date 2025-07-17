@@ -7,12 +7,14 @@ import android.view.ContextMenu;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -56,6 +58,15 @@ public class DetalleContacto extends AppCompatActivity {
         tvEmail.setText(email);
 
         registerForContextMenu(tvNombre);
+
+        //Menu popup
+        ImageView imgContacto = findViewById(R.id.imgContacto);
+        imgContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                levantaMenuPopup(view);
+            }
+        });
     }
 
     public void llamar(View view) {
@@ -104,4 +115,23 @@ public class DetalleContacto extends AppCompatActivity {
         }
         return super.onContextItemSelected(item);
     }
-}
+
+    //Acciones menu popup
+    public void levantaMenuPopup(View view){
+        PopupMenu popupMenu = new PopupMenu(this,view);
+        popupMenu.getMenuInflater().inflate(R.menu.menu_popup,popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+               if(menuItem.getItemId() == R.id.mView){
+                   Toast.makeText(DetalleContacto.this,getString(R.string.menu_view),Toast.LENGTH_SHORT).show();
+               }else if(menuItem.getItemId() == R.id.mViewDetail){
+                   Toast.makeText(DetalleContacto.this,getString(R.string.menu_view_detail),Toast.LENGTH_SHORT).show();
+               }
+                return false;
+
+            }
+        });
+        popupMenu.show();
+        }
+    }
