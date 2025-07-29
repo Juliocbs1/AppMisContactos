@@ -1,4 +1,4 @@
-package com.example.miscontactos;
+package com.example.miscontactos.adapter;
 
 import static android.widget.Toast.makeText;
 
@@ -14,6 +14,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.miscontactos.pojo.Contacto;
+import com.example.miscontactos.DetalleContacto;
+import com.example.miscontactos.R;
 
 import java.util.ArrayList;
 
@@ -46,7 +50,7 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               Intent intent = new Intent(act,DetalleContacto.class);
+               Intent intent = new Intent(act, DetalleContacto.class);
                intent.putExtra(act.getString(R.string.pnombre),contacto.getNombre());
                intent.putExtra(act.getString(R.string.ptelefono),contacto.getTelefono());
                intent.putExtra(act.getString(R.string.pemail),contacto.getEmail());

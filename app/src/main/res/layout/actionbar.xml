@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:background="@color/purple_500"
-    android:elevation="@dimen/elevacion_actionbar"
-    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    android:paddingTop="7dp">
+    android:layout_height="wrap_content">
 
+    <!-- Toolbar arriba -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        android:elevation="@dimen/elevacion_actionbar"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:paddingTop="7dp" />
 
-</androidx.appcompat.widget.Toolbar>
+    <!-- TabLayout debajo -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

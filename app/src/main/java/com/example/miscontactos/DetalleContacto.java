@@ -26,21 +26,21 @@ public class DetalleContacto extends AppCompatActivity {
     private TextView tvTelefono;
     private TextView tvEmail;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_contacto);
 
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar); // IMPORTANTE
-
-
-
-
+        toolbar = findViewById(R.id.toolbarnorm);
+        if(toolbar != null){
+            setSupportActionBar(toolbar);
+        }
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+
 
 
 

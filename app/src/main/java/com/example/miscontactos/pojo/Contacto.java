@@ -1,4 +1,4 @@
-package com.example.miscontactos;
+package com.example.miscontactos.pojo;
 
 public class Contacto {
 
