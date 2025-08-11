@@ -1,6 +1,10 @@
 package com.example.miscontactos;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,5 +17,31 @@ public class FormularioContacto extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarnorm);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("Formulario Contactos");
+
+
+        EditText campoNombre = findViewById(R.id.main_campo_nombre);
+        EditText campoCorreo = findViewById(R.id.main_campo_correo);
+        EditText campoMensaje = findViewById(R.id.main_campo_mensaje);
+        Button btnEnviar = findViewById(R.id.main_btn_enviar);
+        btnEnviar.setOnClickListener(v -> {
+            String nombre = campoNombre.getText().toString();
+            String correo = campoCorreo.getText().toString();
+            String mensaje ="Nombre: " + nombre + "\nCorreo: " + correo + "\nMensaje: " +campoMensaje.getText().toString();
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("message/rfc822"); // Tipo MIME para email
+            intent.putExtra(Intent.EXTRA_EMAIL, new String[]{correo}); // Cambia por tu correo
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Formulario de contacto");
+            intent.putExtra(Intent.EXTRA_TEXT, mensaje);
+
+            try {
+                startActivity(Intent.createChooser(intent, "Enviar correo contacto"));
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(this, "No hay clientes de correo instalados.", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
     }
 }
