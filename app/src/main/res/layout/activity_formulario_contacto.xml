@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+   >
+    <include android:id="@+id/toolbarnorm"
+        layout="@layout/action_bar_normal"
+        android:text="@string/toolbar_title">
+    </include>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/main_text_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_nombre"
+        android:labelFor="@+id/main_campo_nombre"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/main_campo_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/main_text_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_correo"
+        android:labelFor="@+id/main_campo_nombre"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/main_campo_correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/main_text_mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/main_mensaje"
+        android:labelFor="@+id/main_campo_mensaje"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/main_campo_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_enviar">
+
+    </com.google.android.material.button.MaterialButton>
+
+</LinearLayout>

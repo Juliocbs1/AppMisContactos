@@ -60,12 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     }
 
     private ArrayList<Fragment> agregarFragments(){
@@ -114,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
         }else if(itemId == R.id.mSettings){
                 Intent intent2 = new Intent(this, SettingsActivity.class);
                 startActivity(intent2);
+        }else if(itemId == R.id.mContacto){
+            Intent intent3 = new Intent(this, FormularioContacto.class);
+            startActivity(intent3);
         }
 
         return super.onOptionsItemSelected(item);
