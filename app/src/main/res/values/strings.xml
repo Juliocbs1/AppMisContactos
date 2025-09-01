@@ -46,6 +46,7 @@
     <string name="main_mensaje">Mensaje</string>
 
     <string name="main_enviar">ENVIAR</string>
+    <string name="main_guardarfile">GUARDAR FILE</string>
 
     <string name="toolbar_title">Formulario_Contacto</string>
 

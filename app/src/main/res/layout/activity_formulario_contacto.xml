@@ -70,4 +70,14 @@
 
     </com.google.android.material.button.MaterialButton>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_guardarfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_guardarfile">
+
+    </com.google.android.material.button.MaterialButton>
+
+
 </LinearLayout>
