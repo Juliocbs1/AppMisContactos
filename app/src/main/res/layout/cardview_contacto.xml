@@ -34,6 +34,16 @@
             android:background="@drawable/icons8_me_gusta_50"
 
              />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plike"
+            android:textSize="@dimen/nombre_cardview"
+            android:textStyle="bold"
+            >
+
+        </androidx.appcompat.widget.AppCompatTextView>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvNombre"

@@ -20,9 +20,11 @@
     <string name="telefono">5555555555</string>
     <string name="email">anahi5@example-pet-store.com</string>
 
+
     <string name="pnombre">nombre</string>
     <string name="ptelefono">telefono</string>
     <string name="pemail">email</string>
+    <string name="plike">0</string>
 
     <string name="menu_about">About</string>
     <string name="menu_settings">Settings</string>
@@ -47,8 +49,11 @@
 
     <string name="main_enviar">ENVIAR</string>
     <string name="main_guardarfile">GUARDAR FILE</string>
+    <string name="main_guardareferencia">GUARDAR REFERENCIA</string>
+    <string name="main_mostrareferencia">MOSTRAR REFERENCIA</string>
 
     <string name="toolbar_title">Formulario_Contacto</string>
+    <string name="referencia_guardada">REFERENCIA GUARDADA</string>
 
 
 </resources>

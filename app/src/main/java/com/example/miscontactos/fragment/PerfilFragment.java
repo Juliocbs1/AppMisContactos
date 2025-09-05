@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 
 import com.example.miscontactos.R;
 import com.example.miscontactos.adapter.ContactoAdaptador;
-import com.example.miscontactos.pojo.Contacto;
+import com.example.miscontactos.model.Contacto;
 
 import java.util.ArrayList;
 
@@ -50,11 +50,11 @@ public class PerfilFragment extends Fragment {
 
     public void inicializarListaContacto(){
         contactos= new ArrayList<Contacto>();
-        contactos.add(new Contacto("Anahi Salgado", "5555555555", "anahi@example.com",R.drawable.coservipp));
-        contactos.add(new Contacto("Jose","255155","jose@example.com",R.drawable.falco));
-        contactos.add(new Contacto("Maria","65544","maria@example.com",R.drawable.coservipp));
-        contactos.add(new Contacto("Juan","18831","juan@example.com",R.drawable.falco));
-        contactos.add(new Contacto("Pedro","645623","pedro@example.com",R.drawable.coservipp));
+        contactos.add(new Contacto(2,"Anahi Salgado", "5555555555", "anahi@example.com",R.drawable.coservipp,0));
+        contactos.add(new Contacto(3,"Jose","255155","jose@example.com",R.drawable.falco,5));
+        contactos.add(new Contacto(4,"Maria","65544","maria@example.com",R.drawable.coservipp,6));
+        contactos.add(new Contacto(5,"Juan","18831","juan@example.com",R.drawable.falco,7));
+        contactos.add(new Contacto(6,"Pedro","645623","pedro@example.com",R.drawable.coservipp,8));
     }
 
 }

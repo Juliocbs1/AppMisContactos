@@ -79,5 +79,30 @@
 
     </com.google.android.material.button.MaterialButton>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_guardareferencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_guardareferencia">
 
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_btn_mostrarefrencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_mostrareferencia">
+
+    </com.google.android.material.button.MaterialButton>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_referencia"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/referencia_guardada"
+        android:textSize="20sp">
+
+    </androidx.appcompat.widget.AppCompatTextView>
 </LinearLayout>

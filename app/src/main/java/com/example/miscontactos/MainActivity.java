@@ -22,24 +22,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.miscontactos.adapter.ContactoAdaptador;
 import com.example.miscontactos.adapter.PageAdaptador;
 import com.example.miscontactos.fragment.PerfilFragment;
 import com.example.miscontactos.fragment.RecyclerViewFragment;
-import com.example.miscontactos.pojo.Contacto;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 
