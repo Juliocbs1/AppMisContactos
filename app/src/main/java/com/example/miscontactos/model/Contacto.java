@@ -9,6 +9,9 @@ public class Contacto {
     private int foto;
     private int like;
 
+    public Contacto() {
+    }
+
     public Contacto(int id, String nombre, String telefono, String email, int like) {
         this.id = id;
 
