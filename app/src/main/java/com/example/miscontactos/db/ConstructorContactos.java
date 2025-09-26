@@ -2,6 +2,7 @@ package com.example.miscontactos.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.example.miscontactos.R;
 import com.example.miscontactos.model.Contacto;
@@ -28,7 +29,7 @@ public class ConstructorContactos {
     */
     public ArrayList<Contacto> obtenerContactos() {
         BaseDatos baseDatos = new BaseDatos(context);
-        insertarContactos(baseDatos);
+      //  insertarContactos(baseDatos);
         return baseDatos.obtenerContactos();
     }
 
@@ -55,8 +56,22 @@ public class ConstructorContactos {
         db.insertarContacto(contentValues);
 
 
-
     }
+
+    public void insertarLikeContacto(int idContacto, int like){
+        BaseDatos db = new BaseDatos(context);
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ConstantesBaseDat.COLUMN_ID_CONTACTO, idContacto);
+        contentValues.put(ConstantesBaseDat.COLUMN_LIKE, like);
+        db.insertarLikeContacto(contentValues);
+    }
+
+    public int obtenerLikesContacto(Contacto contacto){
+        BaseDatos db = new BaseDatos(context);
+        return db.obtenerLikesContacto(contacto);
+    }
+
+
 
 
 }

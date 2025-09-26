@@ -13,13 +13,16 @@ import android.view.ViewGroup;
 import com.example.miscontactos.R;
 import com.example.miscontactos.adapter.ContactoAdaptador;
 import com.example.miscontactos.model.Contacto;
+import com.example.miscontactos.presenter.IIRecyclerViewFragmentPresenter;
+import com.example.miscontactos.presenter.RecyclerViewFragmentPresenter;
 
 import java.util.ArrayList;
 
 
-public class PerfilFragment extends Fragment {
+public class PerfilFragment extends Fragment implements IRecyclerViewFragmentView {
     ArrayList<Contacto> contactos;
     private RecyclerView listaContactos;
+    private IIRecyclerViewFragmentPresenter iRecyclerViewFragmentPresenter;
 
     public PerfilFragment() {
 
@@ -32,29 +35,31 @@ public class PerfilFragment extends Fragment {
         //return inflater.inflate(R.layout.fragment_perfil, container, false);
         View v = inflater.inflate(R.layout.fragment_perfil,container,false);
         listaContactos = v.findViewById(R.id.rvContactos);
+        iRecyclerViewFragmentPresenter = new RecyclerViewFragmentPresenter(this,getContext());
 
+
+        return v;
+    }
+
+
+
+    @Override
+    public void generarLinearLayoutVertical() {
         GridLayoutManager llm = new GridLayoutManager(getActivity(),3);
 
         listaContactos.setLayoutManager(llm);
 
-
-        inicializarListaContacto();
-        inicializarAdaptador();
-        return v;
     }
 
-    public void inicializarAdaptador(){
+    @Override
+    public ContactoAdaptador crearAdaptador(ArrayList<Contacto> contactos) {
         ContactoAdaptador adaptador = new ContactoAdaptador(contactos,getActivity());
+
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarDatos(ContactoAdaptador adaptador) {
         listaContactos.setAdapter(adaptador);
     }
-
-    public void inicializarListaContacto(){
-        contactos= new ArrayList<Contacto>();
-        contactos.add(new Contacto(2,"Anahi Salgado", "5555555555", "anahi@example.com",R.drawable.coservipp,0));
-        contactos.add(new Contacto(3,"Jose","255155","jose@example.com",R.drawable.falco,5));
-        contactos.add(new Contacto(4,"Maria","65544","maria@example.com",R.drawable.coservipp,6));
-        contactos.add(new Contacto(5,"Juan","18831","juan@example.com",R.drawable.falco,7));
-        contactos.add(new Contacto(6,"Pedro","645623","pedro@example.com",R.drawable.coservipp,8));
-    }
-
 }

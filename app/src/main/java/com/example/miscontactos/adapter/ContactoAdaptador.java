@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.miscontactos.db.ConstructorContactos;
 import com.example.miscontactos.model.Contacto;
 import com.example.miscontactos.DetalleContacto;
 import com.example.miscontactos.R;
@@ -65,8 +66,13 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             @Override
             public void onClick(View v) {
                 Toast.makeText(act, "Diste Like a " + contacto.getNombre(), Toast.LENGTH_SHORT).show();
-                contacto.setLike(contacto.getLike() + 1);
-                holder.tvLike.setText(String.valueOf(contacto.getLike()));
+
+
+
+                ConstructorContactos constructorContactos = new ConstructorContactos(act);
+                constructorContactos.insertarLikeContacto(contacto.getId(), contacto.getLike());
+
+                holder.tvLike.setText(String.valueOf(constructorContactos.obtenerLikesContacto(contacto)));
 
             }
 

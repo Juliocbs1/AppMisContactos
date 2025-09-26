@@ -33,7 +33,7 @@ public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragm
         View v = inflater.inflate(R.layout.fragment_recyclervirew,container,false);
         listaContactos = v.findViewById(R.id.rvContactos);
         iRecyclerViewFragmentPresenter = new RecyclerViewFragmentPresenter(this,getContext());
-        iRecyclerViewFragmentPresenter.obtenerContactosBD();
+
 
         return v;
     }
