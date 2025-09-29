@@ -56,4 +56,7 @@
     <string name="referencia_guardada">REFERENCIA GUARDADA</string>
 
 
+    <string name="titulo_llamadas">Llamadas</string>
+    <string name="mostrar_llamadas">MOSTRAR LLAMADAS</string>
+
 </resources>

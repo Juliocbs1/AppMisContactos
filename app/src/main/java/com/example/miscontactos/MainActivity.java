@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.miscontactos.adapter.PageAdaptador;
+import com.example.miscontactos.fragment.LlamadaFragment;
 import com.example.miscontactos.fragment.PerfilFragment;
 import com.example.miscontactos.fragment.RecyclerViewFragment;
 import com.google.android.material.tabs.TabLayout;
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new RecyclerViewFragment());
         fragments.add(new PerfilFragment());
+        fragments.add(new LlamadaFragment());
         return fragments;
 
     }
@@ -131,6 +133,12 @@ public class MainActivity extends AppCompatActivity {
 
                             tab.setIcon(R.drawable.usuario);
                             break;
+
+                        case 2:
+
+                            tab.setIcon(R.drawable.icons8_call_50);
+                            break;
+
                     }
                 }
         ).attach();
@@ -228,6 +236,8 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
+
 
 
 

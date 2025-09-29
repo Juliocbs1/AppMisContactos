@@ -38,6 +38,7 @@ public class PerfilFragment extends Fragment implements IRecyclerViewFragmentVie
         iRecyclerViewFragmentPresenter = new RecyclerViewFragmentPresenter(this,getContext());
 
 
+
         return v;
     }
 
