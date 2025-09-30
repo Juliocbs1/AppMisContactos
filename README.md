@@ -10,4 +10,7 @@ Aplicacion mobil que usa recycler view, toolbar, usos de intents, activity,menus
 
 5-<img width="515" height="722" alt="image" src="https://github.com/user-attachments/assets/d55c367c-aca7-4063-a27d-dc176f38a197" />
 
+6-<img width="424" height="721" alt="image" src="https://github.com/user-attachments/assets/5569f1c0-1f72-43ff-b910-f00798e498f2" />
+
+
 
