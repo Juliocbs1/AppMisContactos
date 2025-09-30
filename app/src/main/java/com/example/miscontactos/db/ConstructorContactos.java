@@ -29,9 +29,10 @@ public class ConstructorContactos {
     */
     public ArrayList<Contacto> obtenerContactos() {
         BaseDatos baseDatos = new BaseDatos(context);
-      //  insertarContactos(baseDatos);
+        insertarContactos(baseDatos);
         return baseDatos.obtenerContactos();
     }
+
 
 
     public void insertarContactos(BaseDatos db){

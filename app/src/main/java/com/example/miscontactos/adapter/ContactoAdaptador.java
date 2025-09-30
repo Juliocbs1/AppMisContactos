@@ -104,4 +104,6 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
             tvLike = (TextView) itemView.findViewById(R.id.tvLike);
         }
     }
+
+
 }

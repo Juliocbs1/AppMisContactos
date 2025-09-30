@@ -31,6 +31,7 @@
     <string name="menu_contacto">Contacto</string>
     <string name="menu_bluetooth">Bluetooth</string>
 
+
     <string name="texto_settings">Settings del Aplicativo</string>
     <string name="texto_about">Acerca de 2025</string>
 
@@ -58,5 +59,9 @@
 
     <string name="titulo_llamadas">Llamadas</string>
     <string name="mostrar_llamadas">MOSTRAR LLAMADAS</string>
+    <string name="entrada_llamada">Llamada entrante</string>
+    <string name="salida_llamada">Llamada salida</string>
+    <string name="perdida_llamada">Llamada perdida</string>
+    <string name="desconocida_llamada">Llamada desconocida</string>
 
 </resources>

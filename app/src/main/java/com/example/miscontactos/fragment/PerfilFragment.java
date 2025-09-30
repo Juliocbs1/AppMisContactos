@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 
 public class PerfilFragment extends Fragment implements IRecyclerViewFragmentView {
-    ArrayList<Contacto> contactos;
+
     private RecyclerView listaContactos;
     private IIRecyclerViewFragmentPresenter iRecyclerViewFragmentPresenter;
 

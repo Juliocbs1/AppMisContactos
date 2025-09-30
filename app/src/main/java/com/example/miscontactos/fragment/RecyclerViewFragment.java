@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class RecyclerViewFragment extends Fragment implements IRecyclerViewFragmentView {
 
-    ArrayList<Contacto> contactos;
+
     private RecyclerView listaContactos;
     private IIRecyclerViewFragmentPresenter iRecyclerViewFragmentPresenter;
 

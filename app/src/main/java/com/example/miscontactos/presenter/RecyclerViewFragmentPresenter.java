@@ -7,6 +7,8 @@ import com.example.miscontactos.fragment.IRecyclerViewFragmentView;
 import com.example.miscontactos.model.Contacto;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class RecyclerViewFragmentPresenter implements IIRecyclerViewFragmentPresenter  {
    private IRecyclerViewFragmentView iRecyclerViewFragmentView;
@@ -26,6 +28,7 @@ public class RecyclerViewFragmentPresenter implements IIRecyclerViewFragmentPres
     public void obtenerContactosBD() {
         constructorContactos = new ConstructorContactos(context);
         contactos = constructorContactos.obtenerContactos();
+
         mostraContactosRV();
     }
 

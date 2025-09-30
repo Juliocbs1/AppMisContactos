@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.miscontactos.adapter.PageAdaptador;
+import com.example.miscontactos.db.ConstructorContactos;
 import com.example.miscontactos.fragment.LlamadaFragment;
 import com.example.miscontactos.fragment.PerfilFragment;
 import com.example.miscontactos.fragment.RecyclerViewFragment;
@@ -40,6 +41,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private BluetoothAdapter bluetoothAdapter;
+
+    private ConstructorContactos constructorContactos;
 
     // Launcher para mostrar el diálogo del sistema que enciende el Bluetooth
     private ActivityResultLauncher<Intent> enableBluetoothLauncher;

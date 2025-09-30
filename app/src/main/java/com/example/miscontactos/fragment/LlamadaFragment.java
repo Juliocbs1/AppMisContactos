@@ -1,10 +1,13 @@
 package com.example.miscontactos.fragment;
 
 import android.Manifest;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CallLog;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +24,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.example.miscontactos.R;
+
+import java.text.DateFormat;
 
 public class LlamadaFragment extends Fragment {
 
@@ -78,7 +83,7 @@ public class LlamadaFragment extends Fragment {
             // Al pulsar, verificamos si ya tenemos el permiso
             if (tieneReadCallLog()) { // Si el permiso ya está concedido
                 Toast.makeText(requireContext(), "Permiso ya otorgado", Toast.LENGTH_SHORT).show(); // Aviso
-                //consultarContentProviderLlamadas(); // Leemos el registro directamente
+                consultarContentProviderLlamadas(); // Leemos el registro directamente
             } else { // Si NO está concedido
                 solicitarPermisoReadCallLog(); // Iniciamos el flujo para solicitarlo
             }
@@ -115,9 +120,46 @@ public class LlamadaFragment extends Fragment {
         startActivity(i);
     }
 
-    public void consultarCPLLlamadas() {
-       // TextView textView = requireView().findViewById(R.id.textView);
+    public void consultarContentProviderLlamadas() {
+        TextView textView = requireView().findViewById(R.id.tvLlamadas);
+        textView.setText("");
 
+        Uri uri = CallLog.Calls.CONTENT_URI;
+
+        String[] projection = {
+                CallLog.Calls.NUMBER,
+                CallLog.Calls.TYPE,
+                CallLog.Calls.DATE,
+                CallLog.Calls.DURATION
+        };
+
+        ContentResolver contentResolver = getActivity().getContentResolver();
+        Cursor cursor = contentResolver.query(uri, projection, null, null, CallLog.Calls.DATE + " DESC");
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                String number = cursor.getString(0);
+                String type = cursor.getString(1);
+                String date = cursor.getString(2);
+                String duration = cursor.getString(3);
+                String callType = "";
+
+                if(type.equals(CallLog.Calls.INCOMING_TYPE)){
+                    callType = getResources().getString(R.string.entrada_llamada);
+                }else if( type.equals(CallLog.Calls.OUTGOING_TYPE)){
+                    callType = getResources().getString(R.string.salida_llamada);
+                }else if(type.equals(CallLog.Calls.MISSED_TYPE)){
+                    callType = getResources().getString(R.string.perdida_llamada);
+                }else{
+                    callType = getResources().getString(R.string.desconocida_llamada);
+
+                }
+                String detalle = number + " " + callType + " " + date + " " + duration;
+                textView.append(detalle + "\n");
+
+            }
+
+
+        }
     }
 
 
